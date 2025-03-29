@@ -15,7 +15,7 @@ Public Class Form2
     ' ================== Customer Management Button ==================
     Private Sub btnCustomerMgmt_Click(sender As Object, e As EventArgs) Handles btnCustomerMgmt.Click
         ' Navigate to Customer Management Form as Modal Dialog
-        Dim customerForm As New Form9() ' Form9 → Customer Management
+        Dim customerForm As New Form14() ' Form9 → Customer Management
         Me.Hide()
         customerForm.ShowDialog()   ' ✅ Modal Dialog
         Me.Show()                   ' Show Form2 again after closing Form9
@@ -33,7 +33,7 @@ Public Class Form2
     ' ================== Report Button ==================
     Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
         ' Navigate to Report Form as Modal Dialog
-        Dim reportForm As New Form10() ' Form10 → Report
+        Dim reportForm As New Form15() ' Form10 → Report
         Me.Hide()
         reportForm.ShowDialog()    ' ✅ Modal Dialog
         Me.Show()                  ' Show Form2 again after closing Form10
