@@ -14,8 +14,12 @@ Public Class Form14
     ' ========================== LOAD ALL CUSTOMERS ==========================
     Private Sub LoadCustomers()
         Try
-            con.Open()
-            Dim query As String = "SELECT * FROM Customers"
+            ' ✅ Open the connection only if closed
+            If con.State = ConnectionState.Closed Then
+                con.Open()
+            End If
+
+            Dim query As String = "SELECT * FROM Customers ORDER BY DateTime DESC"
             Dim adapter As New SqlDataAdapter(query, con)
             Dim table As New DataTable()
             adapter.Fill(table)
@@ -25,8 +29,12 @@ Public Class Form14
 
         Catch ex As Exception
             MessageBox.Show("Error loading customers: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
         Finally
-            con.Close()
+            ' ✅ Ensure the connection is closed
+            If con.State = ConnectionState.Open Then
+                con.Close()
+            End If
         End Try
     End Sub
 
@@ -35,8 +43,12 @@ Public Class Form14
         Dim searchName As String = txtSearch.Text.Trim()
 
         Try
-            con.Open()
-            Dim query As String = "SELECT * FROM Customers WHERE FullName LIKE @FullName"
+            ' ✅ Open connection only if closed
+            If con.State = ConnectionState.Closed Then
+                con.Open()
+            End If
+
+            Dim query As String = "SELECT * FROM Customers WHERE FullName LIKE @FullName OR Contact LIKE @FullName OR Email LIKE @FullName"
             Dim cmd As New SqlCommand(query, con)
             cmd.Parameters.AddWithValue("@FullName", "%" & searchName & "%")
 
@@ -49,8 +61,12 @@ Public Class Form14
 
         Catch ex As Exception
             MessageBox.Show("Error searching customers: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
         Finally
-            con.Close()
+            ' ✅ Ensure the connection is closed
+            If con.State = ConnectionState.Open Then
+                con.Close()
+            End If
         End Try
     End Sub
 
@@ -61,7 +77,11 @@ Public Class Form14
 
             If ValidateInput() Then
                 Try
-                    con.Open()
+                    ' ✅ Open connection only if closed
+                    If con.State = ConnectionState.Closed Then
+                        con.Open()
+                    End If
+
                     Dim query As String = "UPDATE Customers SET FullName = @FullName, Contact = @Contact, Email = @Email WHERE CustomerID = @CustomerID"
                     Dim cmd As New SqlCommand(query, con)
                     cmd.Parameters.AddWithValue("@FullName", txtFullName.Text)
@@ -73,14 +93,17 @@ Public Class Form14
 
                     MessageBox.Show("Customer updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                    ' ✅ Reload the customer list
+                    ' ✅ Refresh the customer list
                     LoadCustomers()
-                    ClearFields()
 
                 Catch ex As Exception
                     MessageBox.Show("Error updating customer: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
                 Finally
-                    con.Close()
+                    ' ✅ Ensure the connection is closed
+                    If con.State = ConnectionState.Open Then
+                        con.Close()
+                    End If
                 End Try
             End If
         Else
@@ -95,7 +118,11 @@ Public Class Form14
 
             If MessageBox.Show("Are you sure you want to delete this customer?", "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
                 Try
-                    con.Open()
+                    ' ✅ Open connection only if closed
+                    If con.State = ConnectionState.Closed Then
+                        con.Open()
+                    End If
+
                     Dim query As String = "DELETE FROM Customers WHERE CustomerID = @CustomerID"
                     Dim cmd As New SqlCommand(query, con)
                     cmd.Parameters.AddWithValue("@CustomerID", selectedID)
@@ -104,14 +131,17 @@ Public Class Form14
 
                     MessageBox.Show("Customer deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                    ' ✅ Reload the customer list
+                    ' ✅ Refresh the customer list
                     LoadCustomers()
-                    ClearFields()
 
                 Catch ex As Exception
                     MessageBox.Show("Error deleting customer: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
                 Finally
-                    con.Close()
+                    ' ✅ Ensure the connection is closed
+                    If con.State = ConnectionState.Open Then
+                        con.Close()
+                    End If
                 End Try
             End If
         Else
@@ -143,6 +173,13 @@ Public Class Form14
 
         Return True
     End Function
+
+    ' ========================== REFRESH BUTTON ==========================
+    Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
+        ' ✅ Reload all customers
+        LoadCustomers()
+        ClearFields()
+    End Sub
 
     ' ========================== CLEAR FIELDS ==========================
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click

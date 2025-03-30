@@ -49,7 +49,7 @@ Partial Class Form7
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(116, 257)
+        Me.Label2.Location = New System.Drawing.Point(121, 210)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(94, 25)
         Me.Label2.TabIndex = 1
@@ -59,7 +59,7 @@ Partial Class Form7
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(116, 386)
+        Me.Label4.Location = New System.Drawing.Point(116, 358)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(99, 25)
         Me.Label4.TabIndex = 3
@@ -69,7 +69,7 @@ Partial Class Form7
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(116, 317)
+        Me.Label5.Location = New System.Drawing.Point(116, 284)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(158, 25)
         Me.Label5.TabIndex = 4
@@ -96,7 +96,7 @@ Partial Class Form7
         'txtContact
         '
         Me.txtContact.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtContact.Location = New System.Drawing.Point(312, 257)
+        Me.txtContact.Location = New System.Drawing.Point(312, 207)
         Me.txtContact.Name = "txtContact"
         Me.txtContact.Size = New System.Drawing.Size(171, 28)
         Me.txtContact.TabIndex = 8
@@ -104,7 +104,7 @@ Partial Class Form7
         'txtEmail
         '
         Me.txtEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmail.Location = New System.Drawing.Point(312, 317)
+        Me.txtEmail.Location = New System.Drawing.Point(312, 285)
         Me.txtEmail.Name = "txtEmail"
         Me.txtEmail.Size = New System.Drawing.Size(263, 27)
         Me.txtEmail.TabIndex = 9
@@ -112,7 +112,7 @@ Partial Class Form7
         'txtAddress
         '
         Me.txtAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAddress.Location = New System.Drawing.Point(312, 386)
+        Me.txtAddress.Location = New System.Drawing.Point(312, 353)
         Me.txtAddress.Name = "txtAddress"
         Me.txtAddress.Size = New System.Drawing.Size(479, 30)
         Me.txtAddress.TabIndex = 10
@@ -120,7 +120,7 @@ Partial Class Form7
         'btnBack
         '
         Me.btnBack.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBack.Location = New System.Drawing.Point(121, 457)
+        Me.btnBack.Location = New System.Drawing.Point(121, 439)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(118, 48)
         Me.btnBack.TabIndex = 11
@@ -130,7 +130,7 @@ Partial Class Form7
         'btnNext
         '
         Me.btnNext.Font = New System.Drawing.Font("Segoe UI Black", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNext.Location = New System.Drawing.Point(606, 456)
+        Me.btnNext.Location = New System.Drawing.Point(609, 438)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(154, 48)
         Me.btnNext.TabIndex = 12
@@ -141,7 +141,7 @@ Partial Class Form7
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(986, 534)
+        Me.ClientSize = New System.Drawing.Size(986, 523)
         Me.Controls.Add(Me.btnNext)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.txtAddress)
