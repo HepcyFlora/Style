@@ -45,7 +45,7 @@ Partial Class Form10
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Black", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(290, 30)
+        Me.Label1.Location = New System.Drawing.Point(291, 18)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(231, 38)
         Me.Label1.TabIndex = 0
@@ -121,9 +121,9 @@ Partial Class Form10
         '
         Me.pnlScanner.Controls.Add(Me.Label3)
         Me.pnlScanner.Controls.Add(Me.picQRCode)
-        Me.pnlScanner.Location = New System.Drawing.Point(30, 171)
+        Me.pnlScanner.Location = New System.Drawing.Point(35, 171)
         Me.pnlScanner.Name = "pnlScanner"
-        Me.pnlScanner.Size = New System.Drawing.Size(800, 242)
+        Me.pnlScanner.Size = New System.Drawing.Size(803, 267)
         Me.pnlScanner.TabIndex = 9
         Me.pnlScanner.Visible = False
         '
@@ -142,16 +142,16 @@ Partial Class Form10
         Me.pnlUPIID.Controls.Add(Me.Label2)
         Me.pnlUPIID.Controls.Add(Me.txtUPIID)
         Me.pnlUPIID.Controls.Add(Me.btnValidateUPI)
-        Me.pnlUPIID.Location = New System.Drawing.Point(65, 426)
+        Me.pnlUPIID.Location = New System.Drawing.Point(89, 444)
         Me.pnlUPIID.Name = "pnlUPIID"
-        Me.pnlUPIID.Size = New System.Drawing.Size(697, 149)
+        Me.pnlUPIID.Size = New System.Drawing.Size(697, 131)
         Me.pnlUPIID.TabIndex = 9
         Me.pnlUPIID.Visible = False
         '
         'btnUPIScanner
         '
         Me.btnUPIScanner.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUPIScanner.Location = New System.Drawing.Point(87, 103)
+        Me.btnUPIScanner.Location = New System.Drawing.Point(145, 116)
         Me.btnUPIScanner.Name = "btnUPIScanner"
         Me.btnUPIScanner.Size = New System.Drawing.Size(241, 40)
         Me.btnUPIScanner.TabIndex = 10
@@ -161,7 +161,7 @@ Partial Class Form10
         'btnUPIID
         '
         Me.btnUPIID.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUPIID.Location = New System.Drawing.Point(499, 103)
+        Me.btnUPIID.Location = New System.Drawing.Point(505, 116)
         Me.btnUPIID.Name = "btnUPIID"
         Me.btnUPIID.Size = New System.Drawing.Size(224, 40)
         Me.btnUPIID.TabIndex = 11
@@ -173,7 +173,7 @@ Partial Class Form10
         Me.picQRCode.Image = Global.Style.My.Resources.Resources.WhatsApp_Image_2025_03_29_at_16_10_46__1_
         Me.picQRCode.Location = New System.Drawing.Point(470, 6)
         Me.picQRCode.Name = "picQRCode"
-        Me.picQRCode.Size = New System.Drawing.Size(308, 233)
+        Me.picQRCode.Size = New System.Drawing.Size(315, 261)
         Me.picQRCode.TabIndex = 8
         Me.picQRCode.TabStop = False
         '
@@ -181,6 +181,7 @@ Partial Class Form10
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Style.My.Resources.Resources.WhatsApp_Image_2025_03_31_at_23_09_04
         Me.ClientSize = New System.Drawing.Size(931, 676)
         Me.Controls.Add(Me.pnlUPIID)
         Me.Controls.Add(Me.btnUPIID)

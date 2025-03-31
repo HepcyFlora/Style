@@ -168,5 +168,10 @@ Public Class Form11
         paymentForm.ShowDialog()
         Me.Close()
     End Sub
+    ' ========================== FORM CLOSING EVENT ==========================
+    Private Sub Form11_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        ' ✅ Terminate the entire application when any form is closed
+        Application.Exit()
+    End Sub
 
 End Class

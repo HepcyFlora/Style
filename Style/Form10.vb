@@ -32,7 +32,7 @@ Public Class Form10
     Private Sub btnValidateUPI_Click(sender As Object, e As EventArgs) Handles btnValidateUPI.Click
         Dim upiID As String = txtUPIID.Text.Trim()
 
-        ' Simple UPI ID validation
+        ' ✅ Simple UPI ID validation
         If String.IsNullOrWhiteSpace(upiID) OrElse Not upiID.Contains("@") Then
             MessageBox.Show("Invalid UPI ID. Please enter a valid UPI ID.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
@@ -42,7 +42,18 @@ Public Class Form10
 
     ' ========================== CONFIRM PAYMENT ==========================
     Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
-        ' Simulate payment processing
+        ' ✅ Ensure UPI ID validation before proceeding
+        If pnlUPIID.Visible Then
+            Dim upiID As String = txtUPIID.Text.Trim()
+
+            ' Validate UPI ID before proceeding
+            If String.IsNullOrWhiteSpace(upiID) OrElse Not upiID.Contains("@") Then
+                MessageBox.Show("Please enter a valid UPI ID before proceeding.", "Validation Required", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                Return
+            End If
+        End If
+
+        ' ✅ Simulate payment processing
         Dim loadingThread As New Thread(AddressOf ShowLoadingAnimation)
         loadingThread.Start()
 
@@ -52,12 +63,12 @@ Public Class Form10
         ' ✅ Payment success
         loadingThread.Abort()
 
-        ' Reduce stock only if payment is successful
+        ' ✅ Reduce stock only if payment is successful
         If pnlScanner.Visible OrElse pnlUPIID.Visible Then
             ReduceStock()
             MessageBox.Show("Payment successful. Stock reduced.", "Payment Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            ' Navigate to Form13 (Receipt)
+            ' ✅ Navigate to Form13 (Receipt)
             Dim receiptForm As New Form13()
             Me.Hide()
             receiptForm.ShowDialog()
@@ -120,12 +131,17 @@ Public Class Form10
 
     ' ========================== BACK BUTTON ==========================
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        ' Navigate back to Form8 (Payment Options)
+        ' ✅ Navigate back to Form8 (Payment Options)
         Dim paymentForm As New Form8()
         Me.Hide()
         paymentForm.ShowDialog()
         Me.Close()
     End Sub
 
-End Class
+    ' ========================== FORM CLOSING EVENT ==========================
+    Private Sub Form10_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        ' ✅ Terminate the entire application when any form is closed
+        Application.Exit()
+    End Sub
 
+End Class

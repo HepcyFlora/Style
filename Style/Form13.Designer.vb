@@ -34,7 +34,6 @@ Partial Class Form13
         Me.txtContact = New System.Windows.Forms.TextBox()
         Me.dgvReceipt = New System.Windows.Forms.DataGridView()
         Me.btnPrintReceipt = New System.Windows.Forms.Button()
-        Me.btnBack = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.lblTotalAmount = New System.Windows.Forms.Label()
@@ -153,21 +152,11 @@ Partial Class Form13
         Me.btnPrintReceipt.Text = "Print Receipt"
         Me.btnPrintReceipt.UseVisualStyleBackColor = True
         '
-        'btnBack
-        '
-        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Bold)
-        Me.btnBack.Location = New System.Drawing.Point(695, 12)
-        Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(137, 36)
-        Me.btnBack.TabIndex = 12
-        Me.btnBack.Text = "Back"
-        Me.btnBack.UseVisualStyleBackColor = True
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Black", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(291, 32)
+        Me.Label6.Location = New System.Drawing.Point(341, 36)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(214, 45)
         Me.Label6.TabIndex = 13
@@ -196,11 +185,11 @@ Partial Class Form13
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Style.My.Resources.Resources.WhatsApp_Image_2025_03_31_at_23_32_20
         Me.ClientSize = New System.Drawing.Size(844, 592)
         Me.Controls.Add(Me.lblTotalAmount)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.btnPrintReceipt)
         Me.Controls.Add(Me.dgvReceipt)
         Me.Controls.Add(Me.txtContact)
@@ -233,7 +222,6 @@ Partial Class Form13
     Friend WithEvents txtContact As TextBox
     Friend WithEvents dgvReceipt As DataGridView
     Friend WithEvents btnPrintReceipt As Button
-    Friend WithEvents btnBack As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents lblTotalAmount As Label

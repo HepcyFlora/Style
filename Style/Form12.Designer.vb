@@ -173,6 +173,7 @@ Partial Class Form12
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Style.My.Resources.Resources.WhatsApp_Image_2025_03_31_at_23_32_20
         Me.ClientSize = New System.Drawing.Size(704, 569)
         Me.Controls.Add(Me.cmbCardType)
         Me.Controls.Add(Me.txtCardNumber)

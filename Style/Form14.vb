@@ -8,7 +8,7 @@ Public Class Form14
 
     ' ========================== FORM LOAD ==========================
     Private Sub Form14_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LoadCustomers()
+        LoadCustomers()  ' ✅ Load customers only when form loads
     End Sub
 
     ' ========================== LOAD ALL CUSTOMERS ==========================
@@ -19,7 +19,8 @@ Public Class Form14
                 con.Open()
             End If
 
-            Dim query As String = "SELECT * FROM Customers ORDER BY DateTime DESC"
+            ' ✅ Display customers in ascending order (oldest first)
+            Dim query As String = "SELECT * FROM Customers ORDER BY DateTime ASC"
             Dim adapter As New SqlDataAdapter(query, con)
             Dim table As New DataTable()
             adapter.Fill(table)
@@ -48,7 +49,7 @@ Public Class Form14
                 con.Open()
             End If
 
-            Dim query As String = "SELECT * FROM Customers WHERE FullName LIKE @FullName OR Contact LIKE @FullName OR Email LIKE @FullName"
+            Dim query As String = "SELECT * FROM Customers WHERE FullName LIKE @FullName OR Contact LIKE @FullName OR Email LIKE @FullName ORDER BY DateTime ASC"
             Dim cmd As New SqlCommand(query, con)
             cmd.Parameters.AddWithValue("@FullName", "%" & searchName & "%")
 
@@ -93,9 +94,6 @@ Public Class Form14
 
                     MessageBox.Show("Customer updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                    ' ✅ Refresh the customer list
-                    LoadCustomers()
-
                 Catch ex As Exception
                     MessageBox.Show("Error updating customer: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
@@ -130,9 +128,6 @@ Public Class Form14
                     cmd.ExecuteNonQuery()
 
                     MessageBox.Show("Customer deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
-                    ' ✅ Refresh the customer list
-                    LoadCustomers()
 
                 Catch ex As Exception
                     MessageBox.Show("Error deleting customer: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -176,7 +171,7 @@ Public Class Form14
 
     ' ========================== REFRESH BUTTON ==========================
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
-        ' ✅ Reload all customers
+        ' ✅ Reload customers only when the Refresh button is clicked
         LoadCustomers()
         ClearFields()
     End Sub
@@ -195,7 +190,19 @@ Public Class Form14
 
     ' ========================== BACK BUTTON ==========================
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Me.Close()
+        ' ✅ Go back to Form2
+        Dim form2 As New Form2()
+        Me.Hide()
+        form2.ShowDialog()
+        Me.Close()   ' Close Form14 after returning to Form2
+    End Sub
+
+    ' ========================== FORM CLOSING EVENT ==========================
+    Private Sub Form14_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        ' ✅ Close the entire project when X button is clicked
+        If e.CloseReason = CloseReason.UserClosing Then
+            Application.Exit()
+        End If
     End Sub
 
 End Class

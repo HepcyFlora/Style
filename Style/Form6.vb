@@ -127,4 +127,21 @@ Public Class Form6
         customerForm.ShowDialog()
     End Sub
 
+    ' ========================== BACK BUTTON ==========================
+    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
+        ' ✅ Navigate back to Form4
+        Dim form4 As New Form4()
+        Me.Hide()                  ' Hide Form6
+        form4.ShowDialog()         ' Show Form4
+        Me.Close()                  ' Close Form6 after navigating
+    End Sub
+
+    ' ========================== FORM CLOSING EVENT ==========================
+    Private Sub Form6_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        ' ✅ Only close the entire application when the X button is clicked
+        If e.CloseReason = CloseReason.UserClosing Then
+            Application.Exit()
+        End If
+    End Sub
+
 End Class

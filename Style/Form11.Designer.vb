@@ -41,10 +41,10 @@ Partial Class Form11
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Black", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(204, 46)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Black", 20.2!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(369, 24)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(253, 38)
+        Me.Label1.Size = New System.Drawing.Size(307, 46)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "BANK TRANSFER"
         '
@@ -52,7 +52,7 @@ Partial Class Form11
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(69, 124)
+        Me.Label2.Location = New System.Drawing.Point(69, 155)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(222, 25)
         Me.Label2.TabIndex = 1
@@ -92,7 +92,7 @@ Partial Class Form11
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(69, 203)
+        Me.Label6.Location = New System.Drawing.Point(69, 222)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(227, 25)
         Me.Label6.TabIndex = 5
@@ -101,7 +101,7 @@ Partial Class Form11
         'txtHolderName
         '
         Me.txtHolderName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtHolderName.Location = New System.Drawing.Point(312, 124)
+        Me.txtHolderName.Location = New System.Drawing.Point(312, 152)
         Me.txtHolderName.Name = "txtHolderName"
         Me.txtHolderName.Size = New System.Drawing.Size(235, 30)
         Me.txtHolderName.TabIndex = 6
@@ -117,7 +117,7 @@ Partial Class Form11
         'txtAccountNumber
         '
         Me.txtAccountNumber.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAccountNumber.Location = New System.Drawing.Point(312, 198)
+        Me.txtAccountNumber.Location = New System.Drawing.Point(312, 217)
         Me.txtAccountNumber.Name = "txtAccountNumber"
         Me.txtAccountNumber.Size = New System.Drawing.Size(235, 30)
         Me.txtAccountNumber.TabIndex = 8
@@ -163,7 +163,7 @@ Partial Class Form11
         'btnBack
         '
         Me.btnBack.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBack.Location = New System.Drawing.Point(556, 25)
+        Me.btnBack.Location = New System.Drawing.Point(553, 93)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(109, 36)
         Me.btnBack.TabIndex = 13
@@ -174,6 +174,7 @@ Partial Class Form11
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Style.My.Resources.Resources.WhatsApp_Image_2025_03_31_at_23_09_04
         Me.ClientSize = New System.Drawing.Size(688, 621)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.btnConfirm)

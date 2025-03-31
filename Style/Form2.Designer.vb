@@ -28,13 +28,14 @@ Partial Class Form2
         Me.btnInventoryMgmt = New System.Windows.Forms.Button()
         Me.btnReport = New System.Windows.Forms.Button()
         Me.btnLogout = New System.Windows.Forms.Button()
+        Me.btnSales = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Black", 19.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(248, 62)
+        Me.Label1.Location = New System.Drawing.Point(388, 60)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(370, 45)
         Me.Label1.TabIndex = 0
@@ -43,9 +44,10 @@ Partial Class Form2
         'btnStaffCreation
         '
         Me.btnStaffCreation.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnStaffCreation.Location = New System.Drawing.Point(104, 182)
+        Me.btnStaffCreation.Location = New System.Drawing.Point(92, 176)
+        Me.btnStaffCreation.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnStaffCreation.Name = "btnStaffCreation"
-        Me.btnStaffCreation.Size = New System.Drawing.Size(272, 67)
+        Me.btnStaffCreation.Size = New System.Drawing.Size(242, 54)
         Me.btnStaffCreation.TabIndex = 6
         Me.btnStaffCreation.Text = "Create Staff"
         Me.btnStaffCreation.UseVisualStyleBackColor = True
@@ -53,9 +55,10 @@ Partial Class Form2
         'btnCustomerMgmt
         '
         Me.btnCustomerMgmt.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCustomerMgmt.Location = New System.Drawing.Point(456, 182)
+        Me.btnCustomerMgmt.Location = New System.Drawing.Point(405, 176)
+        Me.btnCustomerMgmt.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnCustomerMgmt.Name = "btnCustomerMgmt"
-        Me.btnCustomerMgmt.Size = New System.Drawing.Size(293, 67)
+        Me.btnCustomerMgmt.Size = New System.Drawing.Size(260, 54)
         Me.btnCustomerMgmt.TabIndex = 7
         Me.btnCustomerMgmt.Text = "Customer Mgmt"
         Me.btnCustomerMgmt.UseVisualStyleBackColor = True
@@ -63,9 +66,10 @@ Partial Class Form2
         'btnInventoryMgmt
         '
         Me.btnInventoryMgmt.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnInventoryMgmt.Location = New System.Drawing.Point(104, 304)
+        Me.btnInventoryMgmt.Location = New System.Drawing.Point(92, 284)
+        Me.btnInventoryMgmt.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnInventoryMgmt.Name = "btnInventoryMgmt"
-        Me.btnInventoryMgmt.Size = New System.Drawing.Size(272, 65)
+        Me.btnInventoryMgmt.Size = New System.Drawing.Size(242, 52)
         Me.btnInventoryMgmt.TabIndex = 8
         Me.btnInventoryMgmt.Text = "Inventory Mgmt"
         Me.btnInventoryMgmt.UseVisualStyleBackColor = True
@@ -73,9 +77,10 @@ Partial Class Form2
         'btnReport
         '
         Me.btnReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReport.Location = New System.Drawing.Point(456, 304)
+        Me.btnReport.Location = New System.Drawing.Point(227, 369)
+        Me.btnReport.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnReport.Name = "btnReport"
-        Me.btnReport.Size = New System.Drawing.Size(293, 65)
+        Me.btnReport.Size = New System.Drawing.Size(260, 52)
         Me.btnReport.TabIndex = 9
         Me.btnReport.Text = "Report"
         Me.btnReport.UseVisualStyleBackColor = True
@@ -83,24 +88,38 @@ Partial Class Form2
         'btnLogout
         '
         Me.btnLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogout.Location = New System.Drawing.Point(668, 423)
+        Me.btnLogout.Location = New System.Drawing.Point(612, 399)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(163, 60)
+        Me.btnLogout.Size = New System.Drawing.Size(145, 48)
         Me.btnLogout.TabIndex = 10
         Me.btnLogout.Text = "Logout"
         Me.btnLogout.UseVisualStyleBackColor = True
         '
+        'btnSales
+        '
+        Me.btnSales.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.btnSales.Location = New System.Drawing.Point(405, 284)
+        Me.btnSales.Name = "btnSales"
+        Me.btnSales.Size = New System.Drawing.Size(269, 52)
+        Me.btnSales.TabIndex = 11
+        Me.btnSales.Text = "Sales Mgmt"
+        Me.btnSales.UseVisualStyleBackColor = True
+        '
         'Form2
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(898, 537)
+        Me.BackgroundImage = Global.Style.My.Resources.Resources.WhatsApp_Image_2025_03_31_at_23_09_04
+        Me.ClientSize = New System.Drawing.Size(784, 472)
+        Me.Controls.Add(Me.btnSales)
         Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.btnReport)
         Me.Controls.Add(Me.btnInventoryMgmt)
         Me.Controls.Add(Me.btnCustomerMgmt)
         Me.Controls.Add(Me.btnStaffCreation)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Form2"
         Me.Text = "Form2"
         Me.ResumeLayout(False)
@@ -114,4 +133,5 @@ Partial Class Form2
     Friend WithEvents btnInventoryMgmt As Button
     Friend WithEvents btnReport As Button
     Friend WithEvents btnLogout As Button
+    Friend WithEvents btnSales As Button
 End Class

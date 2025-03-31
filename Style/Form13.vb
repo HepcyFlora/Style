@@ -151,9 +151,11 @@ Public Class Form13
         e.Graphics.DrawString($"Total: ₹{totalAmount:F2}", fontTitle, Brushes.Black, startX, startY + lineHeight)
     End Sub
 
-    ' ========================== BACK BUTTON ==========================
-    Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Me.Close()
+
+    ' ========================== FORM CLOSING EVENT ==========================
+    Private Sub Form13_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        ' ✅ Terminate the entire application when any form is closed
+        Application.Exit()
     End Sub
 
 End Class

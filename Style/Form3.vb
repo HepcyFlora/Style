@@ -2,8 +2,15 @@
 Imports Microsoft.Data.SqlClient ' ✅ Explicitly define the SQL library
 
 Public Class Form3
+
     ' ✅ Correct Database connection (ensure it points to DEMO)
     Dim con As New Microsoft.Data.SqlClient.SqlConnection("Data Source=DESKTOP-SJHEKCV\SQLEXPRESS;Initial Catalog=DEMO;Integrated Security=True;Encrypt=False;Trust Server Certificate=True")
+
+    ' ========================== FORM CLOSING EVENT ==========================
+    Private Sub Form3_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        ' ✅ Terminate the entire application when any form is closed
+        Application.Exit()
+    End Sub
 
     ' ========================== FORM LOAD ==========================
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load

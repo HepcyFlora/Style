@@ -8,6 +8,12 @@ Public Class Form7
     Public Shared CustomerContact As String
     Public Shared CustomerEmail As String
 
+    ' ========================== FORM CLOSING EVENT ==========================
+    Private Sub Form7_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        ' ✅ Terminate the entire application when any form is closed
+        Application.Exit()
+    End Sub
+
     ' ========================== FORM LOAD ==========================
     Private Sub Form7_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ClearFields()

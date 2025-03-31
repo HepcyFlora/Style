@@ -35,63 +35,69 @@ Partial Class Form4
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Black", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(212, 63)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Black", 22.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(188, 50)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(212, 41)
+        Me.Label1.Size = New System.Drawing.Size(263, 50)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "STAFF LOGIN"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(156, 163)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.8!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Location = New System.Drawing.Point(139, 150)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(117, 25)
+        Me.Label2.Size = New System.Drawing.Size(161, 32)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Username:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(156, 246)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.8!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Location = New System.Drawing.Point(143, 233)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(113, 25)
+        Me.Label3.Size = New System.Drawing.Size(155, 32)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Password:"
         '
         'txtUsername
         '
-        Me.txtUsername.Location = New System.Drawing.Point(295, 163)
+        Me.txtUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.txtUsername.Location = New System.Drawing.Point(338, 149)
+        Me.txtUsername.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(153, 26)
+        Me.txtUsername.Size = New System.Drawing.Size(193, 30)
         Me.txtUsername.TabIndex = 3
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(295, 246)
+        Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.Location = New System.Drawing.Point(340, 245)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(153, 26)
+        Me.txtPassword.Size = New System.Drawing.Size(191, 30)
         Me.txtPassword.TabIndex = 4
         '
         'btnStaffLogin
         '
-        Me.btnStaffLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnStaffLogin.Location = New System.Drawing.Point(219, 319)
+        Me.btnStaffLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnStaffLogin.Location = New System.Drawing.Point(211, 361)
+        Me.btnStaffLogin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnStaffLogin.Name = "btnStaffLogin"
-        Me.btnStaffLogin.Size = New System.Drawing.Size(143, 49)
+        Me.btnStaffLogin.Size = New System.Drawing.Size(211, 47)
         Me.btnStaffLogin.TabIndex = 5
         Me.btnStaffLogin.Text = "LOGIN"
         Me.btnStaffLogin.UseVisualStyleBackColor = True
         '
         'btnBack
         '
-        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBack.Location = New System.Drawing.Point(529, 26)
+        Me.btnBack.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold)
+        Me.btnBack.Location = New System.Drawing.Point(529, 27)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(98, 37)
+        Me.btnBack.Size = New System.Drawing.Size(136, 39)
         Me.btnBack.TabIndex = 7
         Me.btnBack.Text = "BACK"
         Me.btnBack.UseVisualStyleBackColor = True
@@ -99,16 +105,17 @@ Partial Class Form4
         'lblMessage
         '
         Me.lblMessage.AutoSize = True
-        Me.lblMessage.Location = New System.Drawing.Point(464, 319)
+        Me.lblMessage.Location = New System.Drawing.Point(412, 255)
         Me.lblMessage.Name = "lblMessage"
-        Me.lblMessage.Size = New System.Drawing.Size(0, 20)
+        Me.lblMessage.Size = New System.Drawing.Size(0, 16)
         Me.lblMessage.TabIndex = 8
         '
         'Form4
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(697, 399)
+        Me.BackgroundImage = Global.Style.My.Resources.Resources.WhatsApp_Image_2025_03_31_at_23_15_46
+        Me.ClientSize = New System.Drawing.Size(701, 419)
         Me.Controls.Add(Me.lblMessage)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.btnStaffLogin)
@@ -117,6 +124,7 @@ Partial Class Form4
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Form4"
         Me.Text = "Form4"
         Me.ResumeLayout(False)

@@ -40,7 +40,7 @@ Partial Class Form6
         'dgvProducts
         '
         Me.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvProducts.Location = New System.Drawing.Point(52, 89)
+        Me.dgvProducts.Location = New System.Drawing.Point(37, 109)
         Me.dgvProducts.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvProducts.Name = "dgvProducts"
         Me.dgvProducts.RowHeadersWidth = 51
@@ -51,7 +51,7 @@ Partial Class Form6
         'dgvCart
         '
         Me.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvCart.Location = New System.Drawing.Point(52, 339)
+        Me.dgvCart.Location = New System.Drawing.Point(37, 340)
         Me.dgvCart.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvCart.Name = "dgvCart"
         Me.dgvCart.RowHeadersWidth = 51
@@ -61,16 +61,16 @@ Partial Class Form6
         '
         'numQuantity
         '
-        Me.numQuantity.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.numQuantity.Location = New System.Drawing.Point(756, 37)
+        Me.numQuantity.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.8!)
+        Me.numQuantity.Location = New System.Drawing.Point(731, 37)
         Me.numQuantity.Name = "numQuantity"
-        Me.numQuantity.Size = New System.Drawing.Size(120, 34)
+        Me.numQuantity.Size = New System.Drawing.Size(145, 43)
         Me.numQuantity.TabIndex = 2
         '
         'btnAddToCart
         '
         Me.btnAddToCart.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddToCart.Location = New System.Drawing.Point(96, 281)
+        Me.btnAddToCart.Location = New System.Drawing.Point(83, 296)
         Me.btnAddToCart.Name = "btnAddToCart"
         Me.btnAddToCart.Size = New System.Drawing.Size(160, 39)
         Me.btnAddToCart.TabIndex = 3
@@ -80,7 +80,7 @@ Partial Class Form6
         'btnRemove
         '
         Me.btnRemove.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRemove.Location = New System.Drawing.Point(344, 281)
+        Me.btnRemove.Location = New System.Drawing.Point(344, 296)
         Me.btnRemove.Name = "btnRemove"
         Me.btnRemove.Size = New System.Drawing.Size(181, 39)
         Me.btnRemove.TabIndex = 4
@@ -90,7 +90,7 @@ Partial Class Form6
         'btnClearCart
         '
         Me.btnClearCart.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClearCart.Location = New System.Drawing.Point(656, 281)
+        Me.btnClearCart.Location = New System.Drawing.Point(653, 296)
         Me.btnClearCart.Name = "btnClearCart"
         Me.btnClearCart.Size = New System.Drawing.Size(167, 39)
         Me.btnClearCart.TabIndex = 5
@@ -110,7 +110,7 @@ Partial Class Form6
         'btnBack
         '
         Me.btnBack.Font = New System.Drawing.Font("Segoe UI", 13.8!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBack.Location = New System.Drawing.Point(52, 511)
+        Me.btnBack.Location = New System.Drawing.Point(65, 511)
         Me.btnBack.Name = "btnBack"
         Me.btnBack.Size = New System.Drawing.Size(132, 44)
         Me.btnBack.TabIndex = 7
@@ -120,10 +120,11 @@ Partial Class Form6
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Black", 18.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(49, 22)
+        Me.Label1.BackColor = System.Drawing.Color.Snow
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Black", 26.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle))
+        Me.Label1.Location = New System.Drawing.Point(42, 37)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(225, 41)
+        Me.Label1.Size = New System.Drawing.Size(330, 60)
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "ADD TO CART"
         '
@@ -140,7 +141,9 @@ Partial Class Form6
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(937, 577)
+        Me.BackColor = System.Drawing.Color.PeachPuff
+        Me.BackgroundImage = Global.Style.My.Resources.Resources.WhatsApp_Image_2025_03_31_at_23_09_04
+        Me.ClientSize = New System.Drawing.Size(913, 589)
         Me.Controls.Add(Me.lblTotalAmount)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnBack)

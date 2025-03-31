@@ -2,6 +2,12 @@
 Imports Microsoft.Data.SqlClient ' ✅ Added Microsoft.Data.SqlClient
 
 Public Class Form2
+    ' ========================== FORM CLOSING EVENT ==========================
+    Private Sub Form2_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        ' ✅ Terminate the entire application when any form is closed
+        Application.Exit()
+    End Sub
+
 
     ' ================== Staff Creation Button ==================
     Private Sub btnStaffCreation_Click(sender As Object, e As EventArgs) Handles btnStaffCreation.Click
@@ -15,10 +21,10 @@ Public Class Form2
     ' ================== Customer Management Button ==================
     Private Sub btnCustomerMgmt_Click(sender As Object, e As EventArgs) Handles btnCustomerMgmt.Click
         ' Navigate to Customer Management Form as Modal Dialog
-        Dim customerForm As New Form14() ' Form9 → Customer Management
+        Dim customerForm As New Form14() ' Form14 → Customer Management
         Me.Hide()
         customerForm.ShowDialog()   ' ✅ Modal Dialog
-        Me.Show()                   ' Show Form2 again after closing Form9
+        Me.Show()                   ' Show Form2 again after closing Form14
     End Sub
 
     ' ================== Inventory Management Button ==================
@@ -33,10 +39,19 @@ Public Class Form2
     ' ================== Report Button ==================
     Private Sub btnReport_Click(sender As Object, e As EventArgs) Handles btnReport.Click
         ' Navigate to Report Form as Modal Dialog
-        Dim reportForm As New Form15() ' Form10 → Report
+        Dim reportForm As New Form15() ' Form15 → Report
         Me.Hide()
         reportForm.ShowDialog()    ' ✅ Modal Dialog
-        Me.Show()                  ' Show Form2 again after closing Form10
+        Me.Show()                  ' Show Form2 again after closing Form15
+    End Sub
+
+    ' ================== Sales Button (NEW) ==================
+    Private Sub btnSales_Click(sender As Object, e As EventArgs) Handles btnSales.Click
+        ' Navigate to Sales Form (Form16) as Modal Dialog
+        Dim salesForm As New Form16() ' Form16 → Sales Management
+        Me.Hide()
+        salesForm.ShowDialog()    ' ✅ Modal Dialog
+        Me.Show()                  ' Show Form2 again after closing Form16
     End Sub
 
     ' ================== Logout Button ==================
@@ -54,7 +69,6 @@ Public Class Form2
     End Sub
 
 End Class
-
 
 
 

@@ -65,7 +65,7 @@ Partial Class Form8
         'btnCard
         '
         Me.btnCard.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCard.Location = New System.Drawing.Point(364, 35)
+        Me.btnCard.Location = New System.Drawing.Point(364, 23)
         Me.btnCard.Name = "btnCard"
         Me.btnCard.Size = New System.Drawing.Size(246, 52)
         Me.btnCard.TabIndex = 3
@@ -84,6 +84,7 @@ Partial Class Form8
         '
         'Panel3
         '
+        Me.Panel3.BackColor = System.Drawing.Color.Ivory
         Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.btnCard)
         Me.Panel3.Location = New System.Drawing.Point(24, 399)
@@ -103,6 +104,7 @@ Partial Class Form8
         '
         'Panel4
         '
+        Me.Panel4.BackColor = System.Drawing.Color.Ivory
         Me.Panel4.Controls.Add(Me.btnCash)
         Me.Panel4.Controls.Add(Me.Label2)
         Me.Panel4.Location = New System.Drawing.Point(24, 529)
@@ -124,7 +126,7 @@ Partial Class Form8
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(26, 29)
+        Me.Label2.Location = New System.Drawing.Point(26, 43)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(222, 29)
         Me.Label2.TabIndex = 6
@@ -132,6 +134,7 @@ Partial Class Form8
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.Ivory
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.btnBankTransfer)
         Me.Panel1.Location = New System.Drawing.Point(24, 279)
@@ -151,6 +154,7 @@ Partial Class Form8
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.Color.Ivory
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.btnUPI)
         Me.Panel2.Location = New System.Drawing.Point(24, 150)
@@ -182,6 +186,7 @@ Partial Class Form8
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Style.My.Resources.Resources.WhatsApp_Image_2025_03_31_at_23_32_20
         Me.ClientSize = New System.Drawing.Size(750, 641)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Panel2)

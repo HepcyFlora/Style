@@ -186,6 +186,7 @@ Partial Class Form14
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Style.My.Resources.Resources.WhatsApp_Image_2025_03_31_at_23_32_20
         Me.ClientSize = New System.Drawing.Size(981, 570)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
