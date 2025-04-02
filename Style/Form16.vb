@@ -139,6 +139,48 @@ Public Class Form16
         End If
     End Sub
 
+    ' ========================== SEARCH SALES ==========================
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        Dim searchText As String = txtSearch.Text.Trim()
+
+        Try
+            ' ✅ Open connection only if closed
+            If con.State = ConnectionState.Closed Then
+                con.Open()
+            End If
+
+            ' ✅ Search query (filters by multiple columns)
+            Dim query As String = "SELECT * FROM Sales 
+                               WHERE CustomerName LIKE @Search 
+                               OR Contact LIKE @Search 
+                               OR Email LIKE @Search 
+                               OR Brand LIKE @Search 
+                               OR Type LIKE @Search 
+                               OR Color LIKE @Search 
+                               ORDER BY DateTime ASC"
+
+            Dim cmd As New SqlCommand(query, con)
+            cmd.Parameters.AddWithValue("@Search", "%" & searchText & "%")
+
+            Dim adapter As New SqlDataAdapter(cmd)
+            Dim table As New DataTable()
+            adapter.Fill(table)
+
+            ' ✅ Bind the result to DataGridView
+            dgvSales.DataSource = table
+
+        Catch ex As Exception
+            MessageBox.Show("Error searching sales: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        Finally
+            ' ✅ Ensure the connection is closed
+            If con.State = ConnectionState.Open Then
+                con.Close()
+            End If
+        End Try
+    End Sub
+
+
     ' ========================== BACK BUTTON ==========================
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         ' ✅ Go back to Form2
