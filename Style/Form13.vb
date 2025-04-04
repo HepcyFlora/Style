@@ -50,13 +50,18 @@ Public Class Form13
             ' ✅ Print the receipt
             printDoc.Print()
 
+            ' ✅ Ensure message box stays on top
+            MessageBox.Show(Me, "Receipt saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
             ' ✅ Close the entire project after printing
             Application.Exit()
 
         Catch ex As Exception
-            MessageBox.Show("Error during receipt printing: " & ex.Message, "Print Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show(Me, "Error during receipt printing: " & ex.Message, "Print Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
+
 
     ' ========================== SAVE TO DATABASE ==========================
     Private Sub SaveToDatabase()
@@ -106,8 +111,6 @@ Public Class Form13
             con.Close()
         End Try
     End Sub
-
-    ' ========================== PRINT DOCUMENT EVENT ==========================
     Private Sub printDoc_PrintPage(sender As Object, e As PrintPageEventArgs) Handles printDoc.PrintPage
         Dim fontTitle As New Font("Segoe UI", 14, FontStyle.Bold)
         Dim fontBody As New Font("Segoe UI", 11, FontStyle.Regular)
@@ -129,9 +132,12 @@ Public Class Form13
         e.Graphics.DrawString($"Payment: {txtPaymentMethod.Text}", fontBody, Brushes.Black, startX, startY)
         startY += lineHeight * 2
 
-        ' ✅ Print cart items
+        ' ✅ Clone cart before iterating
+        Dim cartCopy As DataTable = Form6.cart.Copy()
         Dim totalAmount As Decimal = 0
-        For Each row As DataRow In Form6.cart.Rows
+
+        ' ✅ Print cart items
+        For Each row As DataRow In cartCopy.Rows
             Dim brand As String = row("Brand").ToString()
             Dim type As String = row("Type").ToString()
             Dim color As String = row("Color").ToString()

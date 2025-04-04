@@ -31,7 +31,7 @@ Partial Class Form9
         'btnCashNotReceived
         '
         Me.btnCashNotReceived.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCashNotReceived.Location = New System.Drawing.Point(50, 263)
+        Me.btnCashNotReceived.Location = New System.Drawing.Point(47, 263)
         Me.btnCashNotReceived.Name = "btnCashNotReceived"
         Me.btnCashNotReceived.Size = New System.Drawing.Size(331, 59)
         Me.btnCashNotReceived.TabIndex = 0
@@ -73,7 +73,7 @@ Partial Class Form9
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Style.My.Resources.Resources.WhatsApp_Image_2025_03_31_at_23_14_35
-        Me.ClientSize = New System.Drawing.Size(800, 373)
+        Me.ClientSize = New System.Drawing.Size(823, 421)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.btnCashReceived)
