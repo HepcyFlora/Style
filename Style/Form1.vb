@@ -1,4 +1,4 @@
-﻿Imports Microsoft.Data.SqlClient  ' ✅ Use the correct library
+﻿Imports Microsoft.Data.SqlClient ' ✅ Use the correct SQL Client
 
 Public Class Form1
 
@@ -12,12 +12,12 @@ Public Class Form1
     End Sub
 
     ' ========================== LOGIN BUTTON ==========================
-    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+    Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         Dim username As String = txtUsername.Text.Trim()
         Dim password As String = txtPassword.Text.Trim()
 
         ' ✅ Hardcoded Admin Login
-        If username = "admin" AndAlso password = "admin123" Then
+        If username = "StyleSack" AndAlso password = "admin123" Then
             MessageBox.Show("Admin login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             ' ✅ Navigate to Form2
@@ -25,7 +25,6 @@ Public Class Form1
             Me.Hide()                ' Hide Form1 when moving to Form2
             adminForm.ShowDialog()   ' Show Form2 as a modal dialog
             Me.Close()               ' Close Form1 after Form2 closes
-
         Else
             ' ✅ Invalid credentials message
             MessageBox.Show("Invalid credentials. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -38,16 +37,16 @@ Public Class Form1
     End Sub
 
     ' ========================== LINKED LABEL TO STAFF LOGIN ==========================
-    Private Sub lnkStaffLogin_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkStaffLogin.LinkClicked
+    Private Sub LnkStaffLogin_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles lnkStaffLogin.LinkClicked
         ' ✅ Navigate to Staff Login (Form4)
         Dim staffLoginForm As New Form4()
-        Me.Hide()                    ' Hide Form1 when moving to Form4
-        staffLoginForm.ShowDialog()   ' Show Form4 as a modal dialog
+        Me.Hide()                     ' Hide Form1 when moving to Form4
+        staffLoginForm.ShowDialog()  ' Show Form4 as a modal dialog
         Me.Close()                    ' Close Form1 after Form4 closes
     End Sub
 
     ' ========================== EXIT BUTTON ==========================
-    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+    Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Application.Exit()  ' ✅ Close the entire project
     End Sub
 
