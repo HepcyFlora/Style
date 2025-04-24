@@ -30,8 +30,8 @@ Public Class Form7
     Private Function ValidateInput() As Boolean
         ' ✅ Ensure all fields are filled and valid
         If String.IsNullOrWhiteSpace(txtFullName.Text) OrElse
-           String.IsNullOrWhiteSpace(txtContact.Text) OrElse
-           String.IsNullOrWhiteSpace(txtEmail.Text) Then
+               String.IsNullOrWhiteSpace(txtContact.Text) OrElse
+               String.IsNullOrWhiteSpace(txtEmail.Text) Then
             MessageBox.Show("Please fill in all fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return False
         End If

@@ -121,7 +121,7 @@ Partial Class Form2
         Me.Controls.Add(Me.Label1)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Form2"
-        Me.Text = "Form2"
+        Me.Text = "h"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
