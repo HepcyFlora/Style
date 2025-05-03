@@ -36,7 +36,7 @@ Partial Class Form1
         '
         Me.lblUsername.AutoSize = True
         Me.lblUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.lblUsername.Location = New System.Drawing.Point(437, 133)
+        Me.lblUsername.Location = New System.Drawing.Point(73, 184)
         Me.lblUsername.Name = "lblUsername"
         Me.lblUsername.Size = New System.Drawing.Size(132, 29)
         Me.lblUsername.TabIndex = 0
@@ -46,7 +46,7 @@ Partial Class Form1
         '
         Me.lblPassword.AutoSize = True
         Me.lblPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Bold)
-        Me.lblPassword.Location = New System.Drawing.Point(437, 207)
+        Me.lblPassword.Location = New System.Drawing.Point(59, 288)
         Me.lblPassword.Name = "lblPassword"
         Me.lblPassword.Size = New System.Drawing.Size(128, 29)
         Me.lblPassword.TabIndex = 1
@@ -55,7 +55,7 @@ Partial Class Form1
         'txtUsername
         '
         Me.txtUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.txtUsername.Location = New System.Drawing.Point(583, 132)
+        Me.txtUsername.Location = New System.Drawing.Point(349, 194)
         Me.txtUsername.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtUsername.Name = "txtUsername"
         Me.txtUsername.Size = New System.Drawing.Size(161, 30)
@@ -64,7 +64,7 @@ Partial Class Form1
         'txtPassword
         '
         Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.txtPassword.Location = New System.Drawing.Point(583, 207)
+        Me.txtPassword.Location = New System.Drawing.Point(349, 287)
         Me.txtPassword.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(161, 30)
@@ -74,7 +74,7 @@ Partial Class Form1
         '
         Me.lnkStaffLogin.AutoSize = True
         Me.lnkStaffLogin.Font = New System.Drawing.Font("Segoe UI Black", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lnkStaffLogin.Location = New System.Drawing.Point(92, 420)
+        Me.lnkStaffLogin.Location = New System.Drawing.Point(44, 482)
         Me.lnkStaffLogin.Name = "lnkStaffLogin"
         Me.lnkStaffLogin.Size = New System.Drawing.Size(222, 50)
         Me.lnkStaffLogin.TabIndex = 4
@@ -84,7 +84,7 @@ Partial Class Form1
         'btnLogin
         '
         Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogin.Location = New System.Drawing.Point(426, 344)
+        Me.btnLogin.Location = New System.Drawing.Point(181, 360)
         Me.btnLogin.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(309, 61)
@@ -96,7 +96,7 @@ Partial Class Form1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Black", 22.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(201, 42)
+        Me.Label1.Location = New System.Drawing.Point(172, 86)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(286, 50)
         Me.Label1.TabIndex = 6
@@ -117,7 +117,7 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Style.My.Resources.Resources.WhatsApp_Image_2025_03_31_at_23_15_46
-        Me.ClientSize = New System.Drawing.Size(756, 479)
+        Me.ClientSize = New System.Drawing.Size(586, 558)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnLogin)
