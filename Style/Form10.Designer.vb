@@ -32,13 +32,13 @@ Partial Class Form10
         Me.btnBack = New System.Windows.Forms.Button()
         Me.pnlScanner = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.picQRCode = New System.Windows.Forms.PictureBox()
         Me.pnlUPIID = New System.Windows.Forms.Panel()
         Me.btnUPIScanner = New System.Windows.Forms.Button()
         Me.btnUPIID = New System.Windows.Forms.Button()
-        Me.picQRCode = New System.Windows.Forms.PictureBox()
         Me.pnlScanner.SuspendLayout()
-        Me.pnlUPIID.SuspendLayout()
         CType(Me.picQRCode, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlUPIID.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -137,6 +137,15 @@ Partial Class Form10
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Scan Here for UPI PAYMENTS"
         '
+        'picQRCode
+        '
+        Me.picQRCode.Image = Global.Style.My.Resources.Resources.WhatsApp_Image_2025_03_29_at_16_10_46__1_
+        Me.picQRCode.Location = New System.Drawing.Point(470, 6)
+        Me.picQRCode.Name = "picQRCode"
+        Me.picQRCode.Size = New System.Drawing.Size(315, 261)
+        Me.picQRCode.TabIndex = 8
+        Me.picQRCode.TabStop = False
+        '
         'pnlUPIID
         '
         Me.pnlUPIID.Controls.Add(Me.Label2)
@@ -168,21 +177,12 @@ Partial Class Form10
         Me.btnUPIID.Text = "UPI ID"
         Me.btnUPIID.UseVisualStyleBackColor = True
         '
-        'picQRCode
-        '
-        Me.picQRCode.Image = Global.Style.My.Resources.Resources.WhatsApp_Image_2025_03_29_at_16_10_46__1_
-        Me.picQRCode.Location = New System.Drawing.Point(470, 6)
-        Me.picQRCode.Name = "picQRCode"
-        Me.picQRCode.Size = New System.Drawing.Size(315, 261)
-        Me.picQRCode.TabIndex = 8
-        Me.picQRCode.TabStop = False
-        '
         'Form10
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Style.My.Resources.Resources.WhatsApp_Image_2025_03_31_at_23_09_04
-        Me.ClientSize = New System.Drawing.Size(931, 676)
+        Me.ClientSize = New System.Drawing.Size(960, 676)
         Me.Controls.Add(Me.pnlUPIID)
         Me.Controls.Add(Me.btnUPIID)
         Me.Controls.Add(Me.btnUPIScanner)
@@ -196,9 +196,9 @@ Partial Class Form10
         Me.Text = "Form10"
         Me.pnlScanner.ResumeLayout(False)
         Me.pnlScanner.PerformLayout()
+        CType(Me.picQRCode, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlUPIID.ResumeLayout(False)
         Me.pnlUPIID.PerformLayout()
-        CType(Me.picQRCode, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
